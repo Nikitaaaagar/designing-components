@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+// import "./index.css";
+import "./assets/main.css";
 import Page from "./pages/index";
 import reportWebVitals from "./reportWebVitals";
 
