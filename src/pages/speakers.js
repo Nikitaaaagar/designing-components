@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import SpeakerSearchBar from "../components/SpeakerSearchBar/SpeakerSearchBar";
 import Speakers from "../components/Speakers/Speaker";
 import Footer from "../components/Footer/Footer";
+import Layout from "../components/Layout/Layout";
 
 export const SpeakerContextNew = React.createContext({});
 function SpeakersNew() {
@@ -22,15 +23,21 @@ function SpeakersNew() {
     },
   ];
   return (
-    <div>
-      <Header />
-      <Menu />
+    // <div>
+    //   <Header />
+    //   <Menu />
+    //   <SpeakerContextNew.Provider value={speakers}>
+    //     <SpeakerSearchBar />
+    //     <Speakers />
+    //   </SpeakerContextNew.Provider>
+    //   <Footer />
+    // </div>
+    <Layout>
       <SpeakerContextNew.Provider value={speakers}>
         <SpeakerSearchBar />
         <Speakers />
       </SpeakerContextNew.Provider>
-      <Footer />
-    </div>
+    </Layout>
   );
 }
 
