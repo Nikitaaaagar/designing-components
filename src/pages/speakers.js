@@ -5,23 +5,24 @@ import SpeakerSearchBar from "../components/SpeakerSearchBar/SpeakerSearchBar";
 import Speakers from "../components/Speakers/Speaker";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/Layout/Layout";
+import { SpeakersProvider } from "../Contexts/SpeakersContext";
 
 export const SpeakerContextNew = React.createContext({});
 function SpeakersNew() {
-  const speakers = [
-    {
-      imgSrc: "speaker-component-1124",
-      name: "Douglas",
-    },
-    {
-      imgSrc: "speaker-component-1530",
-      name: "Tamara Baker",
-    },
-    {
-      imgSrc: "speaker-component-10803",
-      name: "Eugene",
-    },
-  ];
+  // const speakers = [
+  //   {
+  //     imgSrc: "speaker-component-1124",
+  //     name: "Douglas",
+  //   },
+  //   {
+  //     imgSrc: "speaker-component-1530",
+  //     name: "Tamara Baker",
+  //   },
+  //   {
+  //     imgSrc: "speaker-component-10803",
+  //     name: "Eugene",
+  //   },
+  // ];
   return (
     // <div>
     //   <Header />
@@ -33,10 +34,10 @@ function SpeakersNew() {
     //   <Footer />
     // </div>
     <Layout>
-      <SpeakerContextNew.Provider value={speakers}>
-        <SpeakerSearchBar />
+      <SpeakersProvider>
+        {/* <SpeakerSearchBar /> */}
         <Speakers />
-      </SpeakerContextNew.Provider>
+      </SpeakersProvider>
     </Layout>
   );
 }
