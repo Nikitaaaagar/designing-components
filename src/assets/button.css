@@ -1,0 +1,13 @@
+/* Input */
+/* .btn {
+  @apply py-2 p-4;
+} */
+
+/* Output */
+.btn-blue {
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: red;
+  transform: translateY(-1px);
+}
